@@ -11,7 +11,7 @@ from telebot.types import (
 from flask import Flask, request
 
 # --- Bot and Flask Setup ---
-BOT_TOKEN = "7495758013:AAEaEqG8Dws02QTVLEgAijHnTT7SuBMyzK8"  # টোকেন এখানে হার্ডকোড করবেন না
+BOT_TOKEN = os.environ.get("BOT_TOKEN") # টোকেন এখানে হার্ডকোড করবেন না
 bot = telebot.TeleBot(BOT_TOKEN, parse_mode="Markdown")
 server = Flask(__name__)
 
