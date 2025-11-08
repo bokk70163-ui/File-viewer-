@@ -61,9 +61,9 @@ def generate_links(message):
         item = item.strip()
         if not item: continue
         if choice == "Username":
-            links.append(f"https://t.me/{item.lstrip('@')}")
+            links.append(f"https://t.me/+{item.lstrip('@')}")
         elif choice == "Number":
-            links.append(f"https://t.me/{item.replace(' ', '')}")
+            links.append(f"https://t.me/+{item.replace(' ', '')}")
     reply = "\n".join(links)
     bot.send_message(message.chat.id, f"Here are your links:\n{reply}")
     user_choice.pop(message.chat.id, None)
